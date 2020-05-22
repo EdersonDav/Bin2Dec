@@ -9,21 +9,35 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="section">
 
     <div class="h1">
       <h1>Convert Numbers</h1>
     </div>
 
-    <label class="label" for="number">Input number binary:
-      <input type="number" name="numbers" id="numbers" maxlength="8">
-    </label>
-    <button>Convert</button>
-    <div id="result">Result in decimal: 10</div>
+    <div class="container">
 
+      <label class="label" for="number">Input number binary:
+        <input class="display" type="number" name="numbers" id="numbers" maxlength="8">
+      </label>
+
+      <div class="comands">
+        <button class="convert">Convert</button>
+
+        <div class="buttonsConvertsTypes">
+          <button class="binarydecimal" id="binary">Binary</button>
+          <button class="binarydecimal" id="decimal">Decimal</button>
+        </div>
+
+      </div>
+
+      <div id="result">Result in decimal: 10</div>
+
+    </div>
   </div>
 
   <script src="Assets/Javascript/script.js"></script>
+
 </body>
 
 </html>
