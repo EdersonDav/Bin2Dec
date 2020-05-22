@@ -47,7 +47,7 @@ function convert() {
   let htmlResult = document.getElementById("result");
   htmlResult.innerHTML = '';
   let textResults = bin ? convertBinary() : convertDecimal();
-  htmlResult.innerHTML += `Result: ${textResults}`;
+  htmlResult.innerHTML += bin ? `Result in decimal: ${textResults}` : `Result in binary: ${textResults}`;
 };
 
 // Convert to Binary
@@ -67,7 +67,7 @@ function convertBinary() {
   };
 
   if (valid) {
-    alert("error");
+    alert("Number entered is not binary");
     return 0;
   } else {
     let pow = arrayNumeric.length - 1;
