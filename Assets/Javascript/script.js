@@ -1,4 +1,3 @@
-
 let bin = true;
 let dec = false;
 
@@ -6,9 +5,11 @@ let dec = false;
 function verifyCalc(button) {
   bin = button.id == "binary" ? true : false
   dec = button.id == "decimal" ? true : false
+  alterLabel()
   boxShadow(button)
 }
 
+//Change boxShadow in buttons
 function boxShadow(button) {
   let addShadow = document.querySelectorAll(".binarydecimal")
   for (let Shadow of addShadow) {
@@ -19,4 +20,10 @@ function boxShadow(button) {
       button.style.boxShadow = "none"
     }
   }
+}
+
+//Alter label input
+function alterLabel() {
+  let label = document.querySelector(".label")
+  label.innerText = bin ? "Input number binary:" : "Input number decimal:"
 }
